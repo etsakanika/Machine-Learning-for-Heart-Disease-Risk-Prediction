@@ -111,7 +111,7 @@ Asks whether the same dataset exhibits **natural cluster structure** that aligns
 
 ---
 
-## What I Took Away From This Project
+## Project Insights
 
 Beyond the headline results, the deliberate choices in this project — that I would highlight in interviews or with academic supervisors — are:
 
@@ -120,17 +120,6 @@ Beyond the headline results, the deliberate choices in this project — that I w
 3. **Using the unsupervised result to interpret the supervised result.** DBSCAN's "failure" to recover the label is itself evidence about the geometry of the problem — and that justifies why the Random Forest needed multiple features in combination.
 4. **Stating limitations honestly.** Small `n`, dropped clinically-meaningful features, single random seed for the split — these are noted, not papered over.
 5. **Connecting findings to the domain.** The feature importance ranking is sanity-checked against cardiology literature, not just reported as numbers.
-
----
-
-## Limitations of This Study
-
-See the "Limitations & Future Work" section in each notebook. Briefly:
-
-- Small sample (n = 295) — test estimates are noisy; CV is the more reliable signal.
-- The most discriminative clinical features (`ca`, `slope`, `thal`) were dropped due to missingness; multiple imputation (e.g., `IterativeImputer`) might salvage them.
-- No multi-source validation (Hungarian only) — population-shift robustness untested.
-- Single random seed for the train-test split; robust reporting would aggregate over multiple seeds.
 
 ---
 
