@@ -4,7 +4,7 @@ A two-part machine learning study on the UCI Hungarian Heart Disease dataset, co
 
 ---
 
-## TL;DR
+## Random Forest - DBSCAN
 
 | Question | Method | Result |
 |---|---|---|
